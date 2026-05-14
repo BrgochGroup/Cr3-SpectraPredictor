@@ -161,6 +161,7 @@ for spine in plt.gca().spines.values():
 
 plt.tight_layout()
 plt.show()
+
 # Predict new compounds
 predict_file = Path.cwd() / "To_predict_fwhm.xlsx"  # Keep this prediction file in the same folder
 output_file = Path.cwd() / "predicted_fwhm.xlsx"    # Output will be saved in the same folder
@@ -168,7 +169,7 @@ output_file = Path.cwd() / "predicted_fwhm.xlsx"    # Output will be saved in th
 predict_df = pd.read_excel(predict_file)
 predict_df.columns = predict_df.columns.astype(str).str.strip()
 
-# Features start from column C in prediction file
+# Features start from column B in prediction file
 X_new = predict_df.iloc[:, 1:].copy()
 X_new = X_new.apply(pd.to_numeric, errors="coerce")
 X_new = X_new.fillna(X.median(numeric_only=True))
@@ -194,7 +195,7 @@ pred_fwhm_eV = final_model.predict(X_new_scaled)
 result_df = predict_df.copy()
 result_df["prediction_FWHM_eV"] = pred_fwhm_eV
 
-save_cols = ["Formula", "prediction_FWHM_eV"]
+save_cols = ["Formula", "prediction_FWHM_eV", "x"]
 
 missing_cols = [c for c in save_cols if c not in result_df.columns]
 if missing_cols:
@@ -206,3 +207,4 @@ print("\nTop 10 predicted FWHM results:")
 print(result_df[save_cols].head(10).to_string(index=False))
 
 print(f"\nPredictions saved to: {output_file}")
+
