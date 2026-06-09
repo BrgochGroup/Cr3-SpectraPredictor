@@ -87,6 +87,16 @@ Prepare the following files in the same directory:
 - Corresponding CIF files (`*.cif`)
 - `elements.xlsx`
 
+To create `Feature_generator.xlsx`, open Microsoft Excel and create a single column named `Formula`. Enter one composition per row and save the file as `Feature_generator.xlsx`.
+
+Example:
+
+| Formula |
+|----------|
+| Ba2ScTaO6 |
+| LiInW2O8 |
+| NaScW2O8 |
+
 Run:
 
 ```text
@@ -101,7 +111,7 @@ To_predict_em.xlsx
 
 #### Additional Features Required
 
-This notebook generates **15 of the 20 features** required by the emission model. To complete `To_predict_em.xlsx`, the following descriptors must be added manually:
+This notebook automatically generates **15 of the 20 features** required by the emission model. To complete `To_predict_em.xlsx`, the following descriptors must be added manually:
 
 - `max_metal_ligand_bond_length`
 - `mean_metal_ligand_bond_length`
@@ -110,8 +120,6 @@ This notebook generates **15 of the 20 features** required by the emission model
 - `1/R2`
 
 The `1/R2` descriptor should be obtained from the Shannon ionic radius table provided above.
-
----
 
 ### 2. Define Features for the FWHM Model
 
