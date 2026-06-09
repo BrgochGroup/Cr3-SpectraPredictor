@@ -93,9 +93,9 @@ Example:
 
 | Formula |
 |----------|
-| Ba2ScTaO6 |
-| LiInW2O8 |
-| NaScW2O8 |
+| MgSiO3 |
+| LiInGeO4 |
+| Ga2O3 |
 
 Run:
 
