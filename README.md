@@ -216,7 +216,16 @@ where:
 The predicted λem and FWHM values can be combined with the Gaussian function above to generate an estimated emission spectrum for the target Cr3+ phosphor.
 
 ---
+### 6. Alternative: Extract Structural Features Directly from Materials Project
 
+Instead of using CIF files to obtain structural descriptors, users may directly retrieve structural information from Materials Project.
+
+First, create a Materials Project API key and add it to `MP_feature_extraction.ipynb`.
+
+Run:
+
+```text
+MP_feature_extraction.ipynb
 ## 👨‍💻 Authors
 
 **Amit Kumar**  
