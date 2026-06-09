@@ -179,7 +179,7 @@ pred_new_nm = EV_NM_CONSTANT / pred_new_eV
 result_df = predict_df.copy()
 result_df["prediction"] = pred_new_nm
 
-save_cols = ["Formula", "prediction", "SGR No.", "1/R2"]
+save_cols = ["Formula", "prediction", "SGR No."]
 
 missing_cols = [c for c in save_cols if c not in result_df.columns]
 if missing_cols:
