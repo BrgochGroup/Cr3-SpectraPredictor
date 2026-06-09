@@ -94,8 +94,6 @@ Example:
 | Formula |
 |----------|
 | MgSiO3 |
-| LiInGeO4 |
-| Ga2O3 |
 
 Run:
 
