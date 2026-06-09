@@ -220,12 +220,31 @@ The predicted λem and FWHM values can be combined with the Gaussian function ab
 
 Instead of using CIF files to obtain structural descriptors, users may directly retrieve structural information from Materials Project.
 
-First, create a Materials Project API key and add it to `MP_feature_extraction.ipynb`.
+Prepare the following file in the same directory:
+
+- `Feature_generator.xlsx`
+
+Create a Materials Project API key and add it to `MP_feature_extraction.ipynb`.
 
 Run:
 
 ```text
 MP_feature_extraction.ipynb
+```
+
+The notebook retrieves crystal structures from Materials Project and calculates the Cr³⁺ polyhedral descriptors required by both the emission wavelength and FWHM prediction models.
+
+The generated structural descriptors can be directly transferred to:
+
+- `To_predict_em.xlsx`
+- `To_predict_fwhm.xlsx`
+
+and used in place of the corresponding CIF-derived structural descriptors.
+
+This workflow provides an alternative to CIF-based structural feature extraction when Materials Project entries are available for the target compounds.
+
+---
+
 ## 👨‍💻 Authors
 
 **Amit Kumar**  
